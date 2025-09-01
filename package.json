@@ -1,0 +1,44 @@
+{
+  "name": "kit.caseyagollan.com",
+  "version": "1.0.0",
+  "description": "Indiekit server for https://kit.caseyagollan.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "indiekit serve"
+  },
+  "keywords": [
+    "indiekit",
+    "indieweb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "indiekit": {
+    "plugins": [
+      "@indiekit/preset-eleventy",
+      "@indiekit/store-github",
+      "@indiekit/syndicator-mastodon"
+    ],
+    "publication": {
+      "me": "https://kit.caseyagollan.com"
+    },
+    "@indiekit/store-github": {
+      "user": "caseyg",
+      "repo": "kit.caseyagollan.com",
+      "branch": "main"
+    },
+    "@indiekit/syndicator-mastodon": {
+      "url": "https://social.coop",
+      "user": "caseyg"
+    }
+  },
+  "dependencies": {
+    "@indiekit/indiekit": "^1.0.0-beta.24",
+    "@indiekit/preset-eleventy": "^1.0.0-beta.20",
+    "@indiekit/store-github": "^1.0.0-beta.21",
+    "@indiekit/syndicator-mastodon": "^1.0.0-beta.23"
+  }
+}
