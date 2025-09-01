@@ -32,13 +32,23 @@
     },
     "@indiekit/syndicator-mastodon": {
       "url": "https://social.coop",
-      "user": "caseyg"
+      "user": "caseyg",
+      "includePermalink": true
+    },
+    "plugins": [
+      "@indiekit/syndicator-bluesky"
+    ],
+    "@indiekit/syndicator-bluesky": {
+      "handle": "caseyagollan.com",
+      "checked": true,
+      "includePermalink": true
     }
   },
   "dependencies": {
     "@indiekit/indiekit": "^1.0.0-beta.24",
     "@indiekit/preset-eleventy": "^1.0.0-beta.20",
     "@indiekit/store-github": "^1.0.0-beta.21",
+    "@indiekit/syndicator-bluesky": "^1.0.0-beta.23",
     "@indiekit/syndicator-mastodon": "^1.0.0-beta.23"
   }
 }
