@@ -24,11 +24,11 @@
       "@indiekit/syndicator-bluesky"
     ],
     "publication": {
-      "me": "https://kit.caseyagollan.com"
+      "me": "https://caseyagollan.com"
     },
     "@indiekit/store-github": {
       "user": "caseyg",
-      "repo": "kit.caseyagollan.com",
+      "repo": "caseyagollan-content",
       "branch": "main"
     },
     "@indiekit/syndicator-mastodon": {
