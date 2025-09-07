@@ -38,7 +38,7 @@
     },
     "@indiekit/syndicator-bluesky": {
       "handle": "caseyagollan.com",
-      "checked": true,
+      "checked": false,
       "includePermalink": false
     },
     "publication": {
