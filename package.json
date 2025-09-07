@@ -24,7 +24,8 @@
       "@indiekit/preset-eleventy",
       "@indiekit/store-github",
       "@indiekit/syndicator-mastodon",
-      "@indiekit/syndicator-bluesky"
+      "@indiekit/syndicator-bluesky",
+      "@indiekit/endpoint-webmention-io"
     ],
     "@indiekit/store-github": {
       "user": "caseyg",
@@ -40,6 +41,9 @@
       "handle": "caseyagollan.com",
       "checked": false,
       "includePermalink": false
+    },
+    "@indiekit/endpoint-webmention-io": {
+      "mountPath": "/webmentions"
     },
     "publication": {
       "me": "https://caseyagollan.com",
