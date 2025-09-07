@@ -25,8 +25,7 @@
       "@indiekit/store-github",
       "@indiekit/syndicator-mastodon",
       "@indiekit/syndicator-bluesky",
-      "@indiekit/endpoint-webmention-io",
-      "@indiekit/endpoint-json-feed"
+      "@indiekit/endpoint-webmention-io"
     ],
     "@indiekit/store-github": {
       "user": "caseyg",
@@ -45,9 +44,6 @@
     },
     "@indiekit/endpoint-webmention-io": {
       "mountPath": "/webmentions"
-    },
-    "@indiekit/endpoint-json-feed": {
-      "feedName": "feed.json"
     },
     "publication": {
       "me": "https://caseyagollan.com",
@@ -149,7 +145,6 @@
     }
   },
   "dependencies": {
-    "@indiekit/endpoint-json-feed": "^1.0.0-beta.20",
     "@indiekit/endpoint-webmention-io": "^1.0.0-beta.21",
     "@indiekit/indiekit": "^1.0.0-beta.24",
     "@indiekit/preset-eleventy": "^1.0.0-beta.20",
