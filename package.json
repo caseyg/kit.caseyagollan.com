@@ -17,6 +17,9 @@
   },
   "type": "module",
   "indiekit": {
+    "application": {
+      "timeZone": "America/New_York"
+    },
     "plugins": [
       "@indiekit/preset-eleventy",
       "@indiekit/store-github",
