@@ -23,6 +23,7 @@
     "plugins": [
       "@indiekit/preset-eleventy",
       "@indiekit/store-github",
+      "@indiekit/store-s3",
       "@indiekit/syndicator-mastodon",
       "@indiekit/syndicator-bluesky",
       "@indiekit/endpoint-webmention-io"
@@ -31,6 +32,11 @@
       "user": "caseyg",
       "repo": "caseyagollan-content",
       "branch": "main"
+    },
+    "@indiekit/store-s3": {
+      "region": "auto",
+      "endpoint": "https://78689551a1a65e36adcd6f3d72a3cacb.r2.cloudflarestorage.com",
+      "bucket": "caseyagollan-content"
     },
     "@indiekit/syndicator-mastodon": {
       "url": "https://social.coop",
@@ -149,6 +155,7 @@
     "@indiekit/indiekit": "^1.0.0-beta.24",
     "@indiekit/preset-eleventy": "^1.0.0-beta.20",
     "@indiekit/store-github": "^1.0.0-beta.21",
+    "@indiekit/store-s3": "^1.0.0-beta.21",
     "@indiekit/syndicator-bluesky": "^1.0.0-beta.23",
     "@indiekit/syndicator-mastodon": "^1.0.0-beta.23"
   }
