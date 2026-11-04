@@ -10,8 +10,7 @@ lockfile; Indiekit packages are pinned to their current individual releases.
 Run `npm ci`, then `npm start`. The server listens on port 3000 (or `PORT` when set).
 
 For Docker, run `docker build -t indiekit .`. The image installs with `npm ci`
-and runs as the unprivileged `node` user. Builds behind a trusted HTTPS proxy
-can supply its CA with `--secret id=proxy_ca,src=/path/to/ca.pem`.
+and runs as the unprivileged `node` user.
 
 ## Docker Compose
 
