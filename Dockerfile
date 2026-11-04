@@ -1,24 +1,15 @@
-# Adjust NODE_VERSION as desired
-ARG NODE_VERSION=20.5.0
+# syntax=docker/dockerfile:1
+ARG NODE_VERSION=24.22.1
 FROM node:${NODE_VERSION}-alpine
-
-# Create app directory
 WORKDIR /usr/src/app
-
-# Set production environment
 ENV NODE_ENV=production
-
-# Install node modules
-COPY package*.json ./
-
-# Can’t use `npm ci` due to https://github.com/npm/cli/issues/4828
-RUN npm i --omit=dev --package-lock=false
-
-# Copy application code
-COPY . .
-
-# Expose port
+COPY package.json package-lock.json ./
+# Optional CA secret supports builds behind a trusted HTTPS proxy.
+RUN --mount=type=secret,id=proxy_ca \
+    if [ -f /run/secrets/proxy_ca ]; then \
+      NODE_EXTRA_CA_CERTS=/run/secrets/proxy_ca npm ci --omit=dev; \
+    else npm ci --omit=dev; fi
+COPY --chown=node:node . .
+USER node
 EXPOSE 3000
-
-# Start the server by default, this can be overwritten at runtime
-CMD [ "npx", "indiekit", "serve" ]
+CMD [ "npm", "start" ]

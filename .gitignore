@@ -1,3 +1,7 @@
 node_modules/
 .DS_Store
 .claude-trace/
+.env
+.env.*
+!.env.example
+backups/

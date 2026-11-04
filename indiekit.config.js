@@ -6,7 +6,7 @@ dotenv.config();
 const config = {
   application: {
     timeZone: "America/New_York",
-    port: 3001,
+    port: Number(process.env.PORT || 3000),
   },
   plugins: [
     "@indiekit/post-type-article",
