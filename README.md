@@ -55,7 +55,9 @@ Before deploying beta.31:
 The connected Railway tools expose service metadata and credential names, but
 cannot create volume backups, access the database, or run production shell
 commands. A backup must be completed through an authenticated Railway session
-before the production rollout.
+before the production rollout when available. On 2026-11-04 the owner reported
+that backup creation requires a Pro plan and explicitly authorized this upgrade
+without a new backup.
 
 ## Known upstream dependency advisories
 
