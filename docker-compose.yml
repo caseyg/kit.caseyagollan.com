@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   indiekit:
     container_name: indiekit
@@ -13,9 +12,13 @@ services:
       - SECRET
       - GITHUB_TOKEN
       - MASTODON_ACCESS_TOKEN
+      - BLUESKY_PASSWORD
+      - S3_ACCESS_KEY
+      - S3_SECRET_KEY
+      - WEBMENTION_IO_TOKEN
   mongo:
     container_name: mongo
-    image: mongo:4
+    image: ${MONGO_IMAGE:?Set MONGO_IMAGE to the version compatible with your volume}
     restart: always
     volumes:
       - mongo:/data/db
