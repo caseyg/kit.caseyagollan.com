@@ -20,7 +20,6 @@
   "dependencies": {
     "@indiekit/endpoint-webmention-io": "1.0.0-beta.30",
     "@indiekit/indiekit": "1.0.0-beta.31",
-    "@indiekit/preset-eleventy": "1.0.0-beta.30",
     "@indiekit/post-type-article": "1.0.0-beta.28",
     "@indiekit/post-type-audio": "1.0.0-beta.30",
     "@indiekit/post-type-bookmark": "1.0.0-beta.30",
@@ -33,11 +32,13 @@
     "@indiekit/post-type-repost": "1.0.0-beta.30",
     "@indiekit/post-type-rsvp": "1.0.0-beta.30",
     "@indiekit/post-type-video": "1.0.0-beta.30",
+    "@indiekit/preset-eleventy": "1.0.0-beta.30",
     "@indiekit/store-github": "1.0.0-beta.30",
     "@indiekit/store-s3": "1.0.0-beta.30",
     "@indiekit/syndicator-bluesky": "1.0.0-beta.30",
     "@indiekit/syndicator-mastodon": "1.0.0-beta.30",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "microformats-parser": "2.0.6"
   },
   "packageManager": "npm@11.19.1"
 }

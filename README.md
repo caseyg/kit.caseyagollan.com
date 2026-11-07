@@ -70,3 +70,30 @@ updates and reassess these findings before treating this upgrade as clearing
 all dependency advisories.
 
 Learn more at <https://getindiekit.com>.
+
+## Manual syndication editor
+
+Append `/syndicate` to a post permalink on caseyagollan.com. The website redirects
+to `/syndication?url=…` on Kit, which uses the existing IndieAuth login and requires
+`update` scope. Select Bluesky, Mastodon, or both, edit each destination's text,
+and choose **Send selected posts**. Existing saved syndication links appear instead
+of a send control. Draft edits do not change the original post.
+
+The local `plugins/syndication` endpoint uses the configured syndicators and MongoDB.
+It checks Indiekit post records and its own durable send receipts; for older posts
+without records it parses the public page's h-entry, including syndication links.
+It does not search social accounts for independently published copies. Photos and
+reply context are retained; audio/video uploads and like/repost actions use other
+workflows. Posts queued for automatic syndication cannot be sent here until the queue
+finishes. Only published public posts can be sent.
+
+A `syndicationReceipts` record reserves each source URL and destination before a
+send, preventing repeated submissions across tabs and restarts. Successful URLs are
+saved there immediately, then added to the original post through Micropub when an
+Indiekit record exists. For legacy pages, the editor keeps the links in receipts.
+If a network response is uncertain, sending to that destination stays blocked.
+An operator must check the social account and reconcile the receipt (record its URL
+if sent, or remove the receipt only after confirming no post was created).
+
+Run `node --test plugins/syndication/index.test.js` for the editor's regression tests.
+Deploy both the website redirect and Kit endpoint to enable the complete flow.

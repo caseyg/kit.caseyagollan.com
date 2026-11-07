@@ -1,4 +1,5 @@
 import process from "node:process";
+import { fileURLToPath } from "node:url";
 import * as dotenv from "dotenv";
 
 dotenv.config();
@@ -27,6 +28,7 @@ const config = {
     "@indiekit/syndicator-mastodon",
     "@indiekit/syndicator-bluesky",
     "@indiekit/endpoint-webmention-io",
+    fileURLToPath(new URL("./plugins/syndication/index.js", import.meta.url)),
   ],
   publication: {
     me: "https://caseyagollan.com",
